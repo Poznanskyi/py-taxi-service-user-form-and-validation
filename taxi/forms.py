@@ -27,9 +27,9 @@ class DriverCreationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = get_user_model()
         fields = UserCreationForm.Meta.fields + (
-            'first_name',
-            'last_name',
-            'email'
+            "first_name",
+            "last_name",
+            "email"
         )
 
 
