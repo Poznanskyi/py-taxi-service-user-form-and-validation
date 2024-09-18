@@ -14,9 +14,12 @@ class DriverLicenseUpdateForm(forms.ModelForm):
         fields = ("license_number",)
 
     def clean_license_number(self):
-        license_number = self.cleaned_data.get('license_number')
-        if not re.match(r'^[A-Z]{3}\d{5}$', license_number):
-            raise forms.ValidationError("License must consist of 3 uppercase letters followed by 5 digits.")
+        license_number = self.cleaned_data.get("license_number")
+        if not re.match(r"^[A-Z]{3}\d{5}$", license_number):
+            raise forms.ValidationError(
+                "License must consist of 3 uppercase "
+                "letters followed by 5 digits."
+            )
         return license_number
 
 
