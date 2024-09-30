@@ -3,7 +3,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
 from django.core.validators import RegexValidator
 
-from models import Car, Driver
+from .models import Car, Driver
 
 
 class DriverLicenseUpdateForm(forms.ModelForm):
